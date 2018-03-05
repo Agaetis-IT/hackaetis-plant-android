@@ -14,6 +14,7 @@
     "clean:android": "cd android && gradlew clean"
   },
   "dependencies": {
+    "native-base": "^2.3.9",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.0"
   },
