@@ -1,5 +1,5 @@
-import React from 'react'
-import { Container, Header, Title, Left, Right, Body } from 'native-base'
+import { Body, Container, Header, Left, Right, Title } from "native-base";
+import React from "react";
 
 const App = () => (
   <Container>
@@ -11,6 +11,6 @@ const App = () => (
       <Right />
     </Header>
   </Container>
-)
+);
 
-export default App
+export default App;
