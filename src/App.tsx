@@ -1,16 +1,27 @@
-import { Body, Container, Header, Left, Right, Title } from "native-base";
+import {
+  Body,
+  Container,
+  Header,
+  Left,
+  Right,
+  StyleProvider,
+  Title
+} from "native-base";
 import React from "react";
+import theme from "./theme";
 
 const App = () => (
-  <Container>
-    <Header>
-      <Left />
-      <Body>
-        <Title>Hackaetis</Title>
-      </Body>
-      <Right />
-    </Header>
-  </Container>
+  <StyleProvider style={theme}>
+    <Container>
+      <Header>
+        <Left />
+        <Body>
+          <Title>Hackaetis</Title>
+        </Body>
+        <Right />
+      </Header>
+    </Container>
+  </StyleProvider>
 );
 
 export default App;
