@@ -5,12 +5,13 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --coverage",
-    "tsc": "tsc",
-    "clean": "rimraf artifacts",
-    "build": "npm run clean && npm run tsc --",
     "lint": "tslint src/**/*.{ts,tsx} --fix",
-    "watch": "npm run build -- -w",
-    "start:android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "tsc": "tsc",
+    "clean": "rimraf artifacts/*",
+    "build": "npm run clean && tsc",
+    "watch": "npm run clean && tsc -w",
+    "start:android":
+      "node node_modules/react-native/local-cli/cli.js run-android",
     "clean:android": "cd android && gradlew clean"
   },
   "dependencies": {
@@ -37,17 +38,12 @@
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.2"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "pre-commit": ["lint"],
   "jest": {
     "preset": "react-native",
     "testRegex": "artifacts/.+\\.(test|spec).js$",
     "coverageDirectory": "coverage",
-    "coverageReporters": [
-      "text-summary",
-      "html"
-    ],
+    "coverageReporters": ["text-summary", "html"],
     "collectCoverageFrom": [
       "artifacts/**/*.js",
       "!artifacts/**/*.spec.js",
