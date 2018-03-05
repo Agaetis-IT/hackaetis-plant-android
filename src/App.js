@@ -11,6 +11,7 @@ const App = () => (
   <StyleProvider style={theme}>
     <Container>
       <Camera />
+      <DetectionSquare top={100} left={200} height={80} width={120} />
     </Container>
   </StyleProvider>
 )
