@@ -4,11 +4,13 @@ module.exports = {
     "eslint:recommended",
     "plugin:jest/recommended",
     "plugin:react/recommended",
+    "plugin:react-native/all",
     "prettier",
     "prettier/react"
   ],
-  plugins: ["jest", "react", "prettier"],
+  plugins: ["jest", "react", "react-native", "prettier"],
   env: {
+    "react-native/react-native": true,
     "jest/globals": true,
     browser: true,
     node: true,
