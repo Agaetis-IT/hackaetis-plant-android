@@ -1,14 +1,16 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Container, Header, Title, Left, Right, Body } from 'native-base'
 
-class App extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text>Hello world </Text>
-      </View>
-    )
-  }
-}
+const App = () => (
+  <Container>
+    <Header>
+      <Left />
+      <Body>
+        <Title>Hackaetis</Title>
+      </Body>
+      <Right />
+    </Header>
+  </Container>
+)
 
 export default App
