@@ -1,0 +1,3 @@
+rootProject.name = 'hackaetisPlantAndroid'
+
+include ':app'
