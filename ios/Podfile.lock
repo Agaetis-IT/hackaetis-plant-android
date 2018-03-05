@@ -1,0 +1,12 @@
+PODS:
+  - TensorFlow-experimental (1.1.1)
+
+DEPENDENCIES:
+  - TensorFlow-experimental
+
+SPEC CHECKSUMS:
+  TensorFlow-experimental: c38ed2a43acaa2d42ce4174ac076efaa76e26a12
+
+PODFILE CHECKSUM: 15f70c633819fd59da06a9e44eba622bfb8e5245
+
+COCOAPODS: 1.4.0

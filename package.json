@@ -6,6 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --coverage",
     "lint": "eslint src --fix",
+    "run:ios": "react-native run-ios",
     "run:android": "node node_modules/react-native/local-cli/cli.js run-android",
     "clean:android": "cd android && gradlew clean"
   },
