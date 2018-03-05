@@ -5,13 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --coverage",
-    "lint": "tslint src/**/*.{ts,tsx} --fix",
-    "tsc": "tsc",
-    "clean": "rimraf artifacts/*",
-    "build": "npm run clean && tsc",
-    "watch": "npm run clean && tsc -w",
-    "start:android":
-      "node node_modules/react-native/local-cli/cli.js run-android",
+    "lint": "eslint src --fix",
+    "run:android": "node node_modules/react-native/local-cli/cli.js run-android",
     "clean:android": "cd android && gradlew clean"
   },
   "dependencies": {
@@ -21,33 +16,20 @@
     "react-native-tensorflow": "^0.1.6"
   },
   "devDependencies": {
-    "@types/jest": "^22.1.4",
-    "@types/react": "^16.0.40",
-    "@types/react-native": "^0.52.16",
+    "babel-eslint": "^8.2.2",
     "babel-jest": "22.4.1",
     "babel-preset-react-native": "4.0.0",
-    "concurrently": "^3.5.1",
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-jest": "^21.12.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "jest": "22.4.2",
     "pre-commit": "^1.2.2",
     "prettier": "^1.11.1",
-    "react-test-renderer": "16.3.0-alpha.1",
-    "rimraf": "^2.6.2",
-    "tslint": "^5.9.1",
-    "tslint-config-prettier": "^1.9.0",
-    "tslint-eslint-rules": "^5.1.0",
-    "tslint-react": "^3.5.1",
-    "typescript": "^2.7.2"
+    "react-test-renderer": "16.3.0-alpha.1"
   },
-  "pre-commit": ["lint"],
-  "jest": {
-    "preset": "react-native",
-    "testRegex": "artifacts/.+\\.(test|spec).js$",
-    "coverageDirectory": "coverage",
-    "coverageReporters": ["text-summary", "html"],
-    "collectCoverageFrom": [
-      "artifacts/**/*.js",
-      "!artifacts/**/*.spec.js",
-      "!artifacts/**/*.index.js"
-    ]
-  }
+  "pre-commit": [
+    "lint"
+  ]
 }

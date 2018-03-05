@@ -1,8 +1,8 @@
-import variable from './../variables/platform';
+import variable from './../variables/platform'
 
 export default (variables = variable) => {
-  const platformStyle = variables.platformStyle;
-  const platform = variables.platform;
+  const platformStyle = variables.platformStyle
+  const platform = variables.platform
   const darkCommon = {
     'NativeBase.Text': {
       color: variables.brandDark,
@@ -12,7 +12,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.brandDark,
-    }
+    },
   }
   const lightCommon = {
     'NativeBase.Text': {
@@ -23,7 +23,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.brandLight,
-    }
+    },
   }
   const primaryCommon = {
     'NativeBase.Text': {
@@ -34,7 +34,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnPrimaryBg,
-    }
+    },
   }
   const successCommon = {
     'NativeBase.Text': {
@@ -45,7 +45,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnSuccessBg,
-    }
+    },
   }
   const infoCommon = {
     'NativeBase.Text': {
@@ -56,7 +56,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnInfoBg,
-    }
+    },
   }
   const warningCommon = {
     'NativeBase.Text': {
@@ -67,7 +67,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnWarningBg,
-    }
+    },
   }
   const dangerCommon = {
     'NativeBase.Text': {
@@ -78,7 +78,7 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnDangerBg,
-    }
+    },
   }
   const buttonTheme = {
     '.disabled': {
@@ -165,7 +165,7 @@ export default (variables = variable) => {
 
     '.primary': {
       '.bordered': {
-        ...primaryCommon
+        ...primaryCommon,
       },
       backgroundColor: variables.btnPrimaryBg,
     },
@@ -179,7 +179,7 @@ export default (variables = variable) => {
 
     '.info': {
       '.bordered': {
-        ...infoCommon
+        ...infoCommon,
       },
       backgroundColor: variables.btnInfoBg,
     },
@@ -351,6 +351,6 @@ export default (variables = variable) => {
     shadowRadius: platformStyle === 'material' ? 1.2 : undefined,
     alignItems: 'center',
     justifyContent: 'space-between',
-  };
-  return buttonTheme;
-};
+  }
+  return buttonTheme
+}

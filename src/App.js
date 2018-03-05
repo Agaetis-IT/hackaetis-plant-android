@@ -5,13 +5,13 @@ import {
   Left,
   Right,
   StyleProvider,
-  Title
-} from "native-base";
-import React from "react";
-import * as tensorflow from "./services/tensorflow";
-import theme from "./theme";
+  Title,
+} from 'native-base'
+import React from 'react'
+import * as tensorflow from './services/tensorflow'
+import theme from './theme'
 
-tensorflow.imageclassifier();
+tensorflow.imageclassifier()
 
 const App = () => (
   <StyleProvider style={theme}>
@@ -25,6 +25,6 @@ const App = () => (
       </Header>
     </Container>
   </StyleProvider>
-);
+)
 
-export default App;
+export default App

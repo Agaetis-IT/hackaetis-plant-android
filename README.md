@@ -1,4 +1,4 @@
-# Agaetis Plant Android
+# Agaetis Plant
 
 ## Install
 
@@ -6,5 +6,4 @@
 
 ## Run
 
-* `yarn watch`
 * `yarn run:android`
