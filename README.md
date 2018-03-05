@@ -7,3 +7,9 @@
 ## Run
 
 * `yarn run:android`
+
+
+## iOS
+* `react-native link`
+* `cd ios && pod install`
+
