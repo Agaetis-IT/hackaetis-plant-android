@@ -11,7 +11,7 @@ import React from 'react'
 import * as tensorflow from './services/tensorflow'
 import theme from './theme'
 
-tensorflow.imageclassifier()
+tensorflow.imageClassifier()
 
 const App = () => (
   <StyleProvider style={theme}>

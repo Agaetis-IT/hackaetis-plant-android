@@ -20,6 +20,7 @@ module.exports = {
     "react/display-name": 0,
     "react/no-unescaped-entities": 0,
     "no-unused-vars": ["error", { args: "none" }],
+    "no-console": "off",
     "prettier/prettier": [
       "error",
       {
