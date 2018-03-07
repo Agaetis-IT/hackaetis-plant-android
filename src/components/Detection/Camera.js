@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 
 let pictures = []
 
-class Camera extends React.Component {
+export default class Camera extends React.Component {
   componentDidMount() {
     this.interval = setInterval(this.takePicture, 2000)
   }
@@ -45,5 +45,3 @@ class Camera extends React.Component {
     }
   }
 }
-
-export default Camera

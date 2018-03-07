@@ -1,45 +1,27 @@
-import { Container, StyleProvider } from 'native-base'
 import React from 'react'
 import * as tensorflow from './services/tensorflow'
+import { StackNavigator } from 'react-navigation'
+import { StyleProvider } from 'native-base'
 import theme from './theme'
-import Camera from './components/Camera'
-import RectangleList from './components/RectangleList'
+
+import Detection from './components/Detection/Detection'
+import Home from './components/Home/Home'
 
 tensorflow.imageclassifier()
 
-const tensorflowDatas = [
+const RootStack = StackNavigator(
   {
-    label: 'Test',
-    probability: 0.1239,
-    x0: 100,
-    x1: 150,
-    y0: 200,
-    y1: 300,
+    Home: { screen: Home },
+    Detection: { screen: Detection },
   },
   {
-    label: 'Test2',
-    probability: 0.4,
-    x0: 200,
-    x1: 300,
-    y0: 200,
-    y1: 300,
-  },
-  {
-    label: 'Test3',
-    probability: 0.9,
-    x0: 10,
-    x1: 200,
-    y0: 400,
-    y1: 500,
-  },
-]
+    initialRouteName: 'Home',
+  }
+)
 
 const App = () => (
   <StyleProvider style={theme}>
-    <Container>
-      <Camera />
-      <RectangleList tensorflowDatas={tensorflowDatas} />
-    </Container>
+    <RootStack />
   </StyleProvider>
 )
 
