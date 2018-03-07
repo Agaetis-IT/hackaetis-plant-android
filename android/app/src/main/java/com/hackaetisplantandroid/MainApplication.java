@@ -2,6 +2,7 @@ package com.hackaetisplantandroid;
 
 import android.app.Application;
 
+import com.horcrux.svg.SvgPackage;
 import com.facebook.react.ReactApplication;
 import com.rntensorflow.RNTensorFlowPackage;
 import com.facebook.react.ReactNativeHost;
@@ -26,7 +27,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new RNCameraPackage(),
-          new RNTensorFlowPackage()
+          new RNTensorFlowPackage(),
+          new SvgPackage()
       );
     }
 
